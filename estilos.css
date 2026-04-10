@@ -1,0 +1,155 @@
+/* --- ESTILOS GENERALES --- */
+body {
+    background-color: #1a1a1d;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #00d2ff;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.contenedor-productos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.producto-card {
+    background-color: #2c2c30;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+}
+
+.producto-card h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #00d2ff;
+}
+
+.precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #39ff14;
+}
+
+.producto-card:hover {
+    transform: scale(1.05);
+    background-color: #333;
+    border-color: #39ff14;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+}
+
+/* --- ESTILOS DEL PIE DE PÁGINA (ACTUALIZADO) --- */
+.footer-final {
+    background-color: #080808; /* Negro más profundo para el fondo */
+    border-top: 2px solid #00ff00; /* Línea neón verde */
+    padding: 50px 20px;
+    margin-top: 80px;
+    width: 100%;
+    box-shadow: 0 -5px 15px rgba(0, 255, 0, 0.1);
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; /* Reducido para que no se vea tan separado */
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* TAMAÑO DEL LOGO CONTROLADO */
+.footer-logo img {
+    width: 100px; /* ¡MUCHO MÁS PEQUEÑO! */
+    height: auto;
+    filter: drop-shadow(0 0 8px #00ff00);
+    transition: 0.3s;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1);
+}
+
+.texto-neon-verde {
+    color: #00ff00;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+.nombre-destacado {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 10px 0 25px 0;
+}
+
+/* BOTONES CON ICONOS */
+.redes-sociales {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el icono y el texto */
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.4s;
+}
+
+.btn-footer i {
+    font-size: 1.2rem; /* Tamaño de los iconos */
+}
+
+/* Colores de los botones */
+.whatsapp { background-color: #25d366; }
+.instagram { background-color: #e1306c; }
+.llamar { background-color: #007bff; }
+
+/* Efecto hover profesional */
+.btn-footer:hover {
+    transform: translateY(-8px);
+    background-color: transparent;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    box-shadow: 0 0 15px #00ff00;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer-flex { 
+        gap: 40px; 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    .redes-sociales { 
+        justify-content: center; 
+        flex-wrap: wrap; 
+    }
+    .footer-logo img {
+        width: 80px; /* Aún más pequeño en móviles */
+    }
+}
